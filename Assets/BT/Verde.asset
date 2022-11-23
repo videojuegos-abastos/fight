@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3922034203697917061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffeaef113dca49c44a9cc4fb34f0fc8b, type: 3}
+  m_Name: CompruebaComida
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: df624c90c2dc11249b4e3e3fa1f70914
+  position: {x: 105.999985, y: 137}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 1998689586260481363}
+  - {fileID: -3899989135798641846}
+--- !u!114 &-3899989135798641846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06645b34bc8cb147807562b3db5f147, type: 3}
+  m_Name: Atacar
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dfd3ec5515c922341928695a37a29c25
+  position: {x: 219, y: 265}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
 --- !u!114 &-1769151809645182061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,12 +58,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 030c0023aad3da741b13c53a0cfd15ed
-  position: {x: 0, y: 84}
+  position: {x: 106.00002, y: 34.99999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: 1998689586260481363}
+  child: {fileID: -3922034203697917061}
   restartOnSuccess: 1
   restartOnFailure: 0
 --- !u!114 &11400000
@@ -41,6 +84,8 @@ MonoBehaviour:
   - {fileID: 6664376036866485740}
   - {fileID: 1998689586260481363}
   - {fileID: -1769151809645182061}
+  - {fileID: -3922034203697917061}
+  - {fileID: -3899989135798641846}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1998689586260481363
@@ -58,7 +103,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6186c27075e903642943ce78712eae07
-  position: {x: 0, y: 181}
+  position: {x: 10.550056, y: 265.25}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -78,7 +123,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e5d08db42514f0643b98e657e07279a2
-  position: {x: 0, y: 0}
+  position: {x: 105.80001, y: -73.60005}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
