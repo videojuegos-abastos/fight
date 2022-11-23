@@ -9,7 +9,14 @@ public class CompruebaComida : CompositeNode
     ActionNode selected;
     protected override void OnStart() {
 
-        Select<Atacar>();
+        Agent me = context.gameObject.GetComponent<Agent>();
+        Agent other = GameManager.GetOther(context.gameObject).GetComponent<Agent>();
+
+        if (me.food > other.food) {
+            Select<Atacar>();
+        } else {
+            Select<Comer>();
+        }
 
     }
 
