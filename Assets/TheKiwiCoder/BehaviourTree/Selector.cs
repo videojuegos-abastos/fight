@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public class #SCRIPTNAME# : CompositeNode
+public class Selector : CompositeNode
 {
     protected override void OnStart() {
     }

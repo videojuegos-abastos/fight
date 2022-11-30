@@ -24,7 +24,7 @@ public class Atacar : ActionNode
 
         agent.SetDestination(other.transform.position);
 
-        if (Vector3.Distance(context.transform.position, other.transform.position) < 1f) {
+        if (Vector3.Distance(context.transform.position, other.transform.position) < 1.3f) {
             return State.Success;
         }
 

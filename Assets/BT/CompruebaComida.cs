@@ -6,7 +6,6 @@ using System;
 
 public class CompruebaComida : CompositeNode
 {
-    ActionNode selected;
     protected override void OnStart() {
 
         Agent me = context.gameObject.GetComponent<Agent>();
@@ -25,14 +24,5 @@ public class CompruebaComida : CompositeNode
 
     protected override State OnUpdate() {
         return selected.Update();
-    }
-
-    void Select<T> () where T : ActionNode {
-        for (int i = 0; i < children.Count; i++) {
-            if (children[i].GetType() == typeof(T)) {
-                selected = (T) children[i];
-                return;
-            }
-        }
     }
 }

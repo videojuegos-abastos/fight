@@ -19,7 +19,7 @@ public class Comer : ActionNode
 
     protected override State OnUpdate() {
 
-        if (Vector3.Distance(context.transform.position, nearest.position) < 1f) {
+        if (Vector3.Distance(context.transform.position, nearest.position) < 1.3f) {
             GameObject.Destroy(nearest.gameObject);
             return State.Success;
         }
