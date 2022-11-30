@@ -23,9 +23,5 @@ namespace TheKiwiCoder {
                 }
             }
         }
-
-        // protected override sealed State OnUpdate() {
-        //     return selected.Update();
-        // }
     }
 }
