@@ -5,12 +5,11 @@ using TheKiwiCoder;
 
 public class Comer : ActionNode
 {
-
     Transform nearest;
     protected override void OnStart() {
 
         GameObject[] food = GameObject.FindGameObjectsWithTag("Comida");
-        nearest = GetNearestComida(food);
+        nearest = GetNearestFood(food);
 
         context.agent.SetDestination(nearest.position);
     }
@@ -25,10 +24,10 @@ public class Comer : ActionNode
             return State.Success;
         }
 
-        return State.Success;
+        return State.Running;
     }
 
-    Transform GetNearestComida(GameObject[] food) {
+    Transform GetNearestFood(GameObject[] food) {
         
         float min = float.MaxValue;
         Transform minTransform = null;
