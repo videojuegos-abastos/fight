@@ -2,26 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
-using System;
 
-public class CompruebaComida : CompositeNode
+public class Atacar_Comer : CompositeNode
 {
     protected override void OnStart() {
 
         Agent me = context.gameObject.GetComponent<Agent>();
         Agent other = GameManager.GetOther(context.gameObject).GetComponent<Agent>();
 
-
-        if (me.food < 3) {
-            Select<Comer>();
+        if (me.food > 5) {
+            Select<Atacar>();
         } else {
-
-            if (me.food > other.food) {
-                Select<Atacar>();
-            } else {
-                Select<Huir>();
-            }
-
+            Select<Comer_Huir>();
         }
 
     }

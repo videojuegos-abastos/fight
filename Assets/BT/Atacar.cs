@@ -12,6 +12,8 @@ public class Atacar : ActionNode
 
     protected override void OnStart() {
 
+        Debug.Log($"{context.gameObject.name}: Atacar");
+
         other = GameManager.GetOther(context.gameObject); // Devuelve el otro agente
         agent = context.gameObject.GetComponent<NavMeshAgent>();
 
@@ -24,7 +26,7 @@ public class Atacar : ActionNode
 
         agent.SetDestination(other.transform.position);
 
-        if (Vector3.Distance(context.transform.position, other.transform.position) < 1.3f) {
+        if (context.agent.remainingDistance < 1.3f) {
             return State.Success;
         }
 

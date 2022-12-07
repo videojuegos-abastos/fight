@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
-using System;
 
-public class CompruebaComida : CompositeNode
+public class Comer_Huir : CompositeNode
 {
     protected override void OnStart() {
 
@@ -12,16 +11,12 @@ public class CompruebaComida : CompositeNode
         Agent other = GameManager.GetOther(context.gameObject).GetComponent<Agent>();
 
 
-        if (me.food < 3) {
-            Select<Comer>();
+        float distanceToOther = Vector3.Distance(me.transform.position, other.transform.position);
+
+        if (distanceToOther < 4 && other.food > me.food) {
+            Select<Huir>();
         } else {
-
-            if (me.food > other.food) {
-                Select<Atacar>();
-            } else {
-                Select<Huir>();
-            }
-
+            Select<Comer>();
         }
 
     }

@@ -1,114 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3922034203697917061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffeaef113dca49c44a9cc4fb34f0fc8b, type: 3}
-  m_Name: CompruebaComida
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: df624c90c2dc11249b4e3e3fa1f70914
-  position: {x: 105.999985, y: 137}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 1998689586260481363}
-  - {fileID: -3899989135798641846}
---- !u!114 &-3899989135798641846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06645b34bc8cb147807562b3db5f147, type: 3}
-  m_Name: Atacar
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: dfd3ec5515c922341928695a37a29c25
-  position: {x: 219, y: 265}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: 
-  drawGizmos: 0
---- !u!114 &-1769151809645182061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
-  m_Name: Repeat
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 030c0023aad3da741b13c53a0cfd15ed
-  position: {x: 106.00002, y: 34.99999}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: -3922034203697917061}
-  restartOnSuccess: 1
-  restartOnFailure: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: Verde
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 6664376036866485740}
-  treeState: 0
-  nodes:
-  - {fileID: 6664376036866485740}
-  - {fileID: 1998689586260481363}
-  - {fileID: -1769151809645182061}
-  - {fileID: -3922034203697917061}
-  - {fileID: -3899989135798641846}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1998689586260481363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7a63087b99a8b4db418a3e0051aff0, type: 3}
-  m_Name: Comer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 6186c27075e903642943ce78712eae07
-  position: {x: 10.550056, y: 265.25}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: 
-  drawGizmos: 0
---- !u!114 &6664376036866485740
+--- !u!114 &-7257509045808069865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,10 +14,163 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: e5d08db42514f0643b98e657e07279a2
-  position: {x: 105.80001, y: -73.60005}
+  guid: fd422bfcc7adb3b4bb871a4df11b89ef
+  position: {x: 27.375732, y: -335.79517}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: -1769151809645182061}
+  child: {fileID: -454101579353606015}
+--- !u!114 &-5936926787653831219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fdcc8591e9fb4f42a0387849ed6b7da, type: 3}
+  m_Name: Huir
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a3bd238cbe53ef3449f092f3405a43f4
+  position: {x: 245.75693, y: 233.00003}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &-775669366824992258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e590c378085009408844523564f5e57, type: 3}
+  m_Name: Atacar_Comer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1536cd00ccf44e64bacd0f26ed92e3b4
+  position: {x: -0.000045776367, y: -63.284927}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -138155611406628594}
+  - {fileID: -342606362026202086}
+--- !u!114 &-454101579353606015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1fddedfa512268544a98440e5611a17e
+  position: {x: 26.99997, y: -202.77327}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -775669366824992258}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-342606362026202086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b567e94776a3b2e49bcb812411c5b624, type: 3}
+  m_Name: Comer_Huir
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 40d8653e69c33fb46b550143ba34f80c
+  position: {x: 133.00005, y: 75.999985}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5365961318389725128}
+  - {fileID: -5936926787653831219}
+--- !u!114 &-138155611406628594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06645b34bc8cb147807562b3db5f147, type: 3}
+  m_Name: Atacar
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 436884079f26f1f4a981240465b5d737
+  position: {x: -149.99998, y: 100.13754}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Verde
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7257509045808069865}
+  treeState: 0
+  nodes:
+  - {fileID: -7257509045808069865}
+  - {fileID: -138155611406628594}
+  - {fileID: 5365961318389725128}
+  - {fileID: -5936926787653831219}
+  - {fileID: -775669366824992258}
+  - {fileID: -342606362026202086}
+  - {fileID: -454101579353606015}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &5365961318389725128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a63087b99a8b4db418a3e0051aff0, type: 3}
+  m_Name: Comer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: deab9e4f5414cec4f9af9931f8ce0b3e
+  position: {x: 58.000088, y: 232.99997}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0

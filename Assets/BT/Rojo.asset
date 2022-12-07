@@ -1,25 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: Rojo
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 1236948364036042722}
-  treeState: 0
-  nodes:
-  - {fileID: 1236948364036042722}
-  - {fileID: 6573120836282954924}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1236948364036042722
+--- !u!114 &-8295578276432991110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: f31047fe7e096604c87d52e656079ddf
+  guid: 191ebbb650e50174cbaa34393c219d3a
   position: {x: 0, y: 0}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: 6573120836282954924}
---- !u!114 &6573120836282954924
+  child: {fileID: 8456062528934949240}
+--- !u!114 &-1269920727234789502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,14 +30,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06645b34bc8cb147807562b3db5f147, type: 3}
-  m_Name: Atacar
+  m_Script: {fileID: 11500000, guid: af7a63087b99a8b4db418a3e0051aff0, type: 3}
+  m_Name: Comer
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 5e173cc899de55d4f9e268da5270cb7f
-  position: {x: 0, y: 167}
+  guid: a2fb78f25c1df5b47968dbe0c464b5b8
+  position: {x: -0.0000009536743, y: 267.70816}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Rojo
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -8295578276432991110}
+  treeState: 0
+  nodes:
+  - {fileID: 0}
+  - {fileID: -8295578276432991110}
+  - {fileID: -1269920727234789502}
+  - {fileID: 8456062528934949240}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &8456062528934949240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 254f5e9b39548ea488487b61ffc464cb
+  position: {x: 0, y: 116.00002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -1269920727234789502}
+  restartOnSuccess: 1
+  restartOnFailure: 0
