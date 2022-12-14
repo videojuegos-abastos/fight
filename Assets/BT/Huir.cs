@@ -22,7 +22,10 @@ public class Huir : ActionNode
         nearest = GetAwayFood(food);
 
 		// Le decimos al NavMeshAgent dónde tiene que ir
-        context.agent.SetDestination(nearest.transform.position);
+		if (nearest != null)
+		{
+			context.agent.SetDestination(nearest.position);
+		}
 
     }
 

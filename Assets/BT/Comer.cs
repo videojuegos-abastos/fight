@@ -17,7 +17,10 @@ public class Comer : ActionNode
         nearest = GetNearestFood(food);
 
 		// Le decimos al NavMeshAgent dónde tiene que ir
-        context.agent.SetDestination(nearest.position);
+		if (nearest != null)
+		{
+			context.agent.SetDestination(nearest.position);
+		}
     }
 
     protected override void OnStop() {}
