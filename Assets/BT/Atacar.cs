@@ -7,29 +7,34 @@ using UnityEngine.AI;
 public class Atacar : ActionNode
 {
 
-    GameObject other;
-    NavMeshAgent agent;
+	readonly float distanceThreshold = 1.3f;
 
-    protected override void OnStart() {
+    GameObject other;
+
+    protected override void OnStart()
+	{
 
         Debug.Log($"{context.gameObject.name}: Atacar");
 
         other = GameManager.GetOther(context.gameObject); // Devuelve el otro agente
-        agent = context.gameObject.GetComponent<NavMeshAgent>();
 
     }
 
-    protected override void OnStop() {
-    }
+    protected override void OnStop() {}
 
-    protected override State OnUpdate() {
+    protected override State OnUpdate()
+	{
+		// Le decimos al NavMeshAgent dónde tiene que ir
+		// Lo hacemos en el update porque el enemigo se puede mover
+        context.agent.SetDestination(other.transform.position);
 
-        agent.SetDestination(other.transform.position);
-
-        if (context.agent.remainingDistance < 1.3f) {
+		// Comprobamos si hemos llegado para salir de la Acción Atacar
+        if (context.agent.remainingDistance < distanceThreshold)
+		{
             return State.Success;
         }
 
+		// Mientras no hayamos llegado, seguimos con la acción
         return State.Running;
     }
 

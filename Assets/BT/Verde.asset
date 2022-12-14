@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9162637424689853469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffeaef113dca49c44a9cc4fb34f0fc8b, type: 3}
+  m_Name: CompruebaComida
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9caf4ded29b6ac146a73cb341f964c15
+  position: {x: 95.99998, y: 3.7425032}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5365961318389725128}
+  - {fileID: -138155611406628594}
+  - {fileID: -5936926787653831219}
+  DISTANCE_THRESHOLD: 3
 --- !u!114 &-7257509045808069865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +40,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: fd422bfcc7adb3b4bb871a4df11b89ef
-  position: {x: 27.375732, y: -335.79517}
+  position: {x: 95.99998, y: -238.2575}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -36,34 +61,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a3bd238cbe53ef3449f092f3405a43f4
-  position: {x: 245.75693, y: 233.00003}
+  position: {x: 291.80496, y: 127.99999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
---- !u!114 &-775669366824992258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e590c378085009408844523564f5e57, type: 3}
-  m_Name: Atacar_Comer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 1536cd00ccf44e64bacd0f26ed92e3b4
-  position: {x: -0.000045776367, y: -63.284927}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: -138155611406628594}
-  - {fileID: -342606362026202086}
 --- !u!114 &-454101579353606015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,37 +81,14 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1fddedfa512268544a98440e5611a17e
-  position: {x: 26.99997, y: -202.77327}
+  position: {x: 95.99998, y: -118.22498}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: -775669366824992258}
+  child: {fileID: -9162637424689853469}
   restartOnSuccess: 1
   restartOnFailure: 0
---- !u!114 &-342606362026202086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b567e94776a3b2e49bcb812411c5b624, type: 3}
-  m_Name: Comer_Huir
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 40d8653e69c33fb46b550143ba34f80c
-  position: {x: 133.00005, y: 75.999985}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 5365961318389725128}
-  - {fileID: -5936926787653831219}
 --- !u!114 &-138155611406628594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +104,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 436884079f26f1f4a981240465b5d737
-  position: {x: -149.99998, y: 100.13754}
+  position: {x: 95.99998, y: 127.99999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -149,9 +128,8 @@ MonoBehaviour:
   - {fileID: -138155611406628594}
   - {fileID: 5365961318389725128}
   - {fileID: -5936926787653831219}
-  - {fileID: -775669366824992258}
-  - {fileID: -342606362026202086}
   - {fileID: -454101579353606015}
+  - {fileID: -9162637424689853469}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &5365961318389725128
@@ -169,7 +147,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: deab9e4f5414cec4f9af9931f8ce0b3e
-  position: {x: 58.000088, y: 232.99997}
+  position: {x: -90.54112, y: 127.99999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 

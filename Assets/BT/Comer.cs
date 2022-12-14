@@ -5,46 +5,64 @@ using TheKiwiCoder;
 
 public class Comer : ActionNode
 {
+
+	readonly float distanceThreshold = 1.3f;
+
     Transform nearest;
     protected override void OnStart() {
        Debug.Log($"{context.gameObject.name}: Comer");
 
+		// Buscamos entre toda la comida que hay la más cercana
         GameObject[] food = GameObject.FindGameObjectsWithTag("Comida");
         nearest = GetNearestFood(food);
 
+		// Le decimos al NavMeshAgent dónde tiene que ir
         context.agent.SetDestination(nearest.position);
     }
 
-    protected override void OnStop() {
-    }
+    protected override void OnStop() {}
 
-    protected override State OnUpdate() {
+    protected override State OnUpdate()
+	{
 
+		// #EC: Si los dos agentes estamos yendo a por la misma comida y el otro se la come antes, salimos de la acción.
         if (nearest == null)
-            return State.Success;
+		{
+			return State.Success;
+		}
 
-        if (Vector3.Distance(context.transform.position, nearest.position) < 1.3f) {
+		// Comprobamos si hemos llegado a la comida para destruirla, sumarnos 1 de comida y salir de la acción Comer
+        if (Vector3.Distance(context.transform.position, nearest.position) < distanceThreshold)
+		{
             GameObject.Destroy(nearest.gameObject);
             OnEat();
             return State.Success;
         }
 
+		// Mientras no hayamos llegado, seguimos con la acción
         return State.Running;
     }
 
-    void OnEat() {
+    void OnEat()
+	{
+		// Aumentamos nuestra comida
         context.gameObject.GetComponent<Agent>().food++;
     }
 
-    Transform GetNearestFood(GameObject[] food) {
+	// Buscamos la comida más cercana
+    Transform GetNearestFood(GameObject[] food)
+	{
         
         float min = float.MaxValue;
         Transform minTransform = null;
 
-        for (int i = 0; i < food.Length; i++) {
+        for (int i = 0; i < food.Length; i++)
+		{
             float distance = Vector3.Distance(context.transform.position, food[i].transform.position);
 
-            if (distance < min) {
+			// Actualizamos la mejor opción si si se cumple que lo es
+            if (distance < min)
+			{
                 min = distance;
                 minTransform = food[i].transform;
             }

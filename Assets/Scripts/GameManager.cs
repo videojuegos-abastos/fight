@@ -26,4 +26,8 @@ public class GameManager : MonoBehaviour
 
         return null;
     }
+
+	public static int GetRemainingFoodCount() {
+		return GameObject.FindGameObjectsWithTag("Comida").Length;
+	}
 }
